@@ -1,0 +1,15 @@
+runners:
+  - name: gpu-runner
+    # Cloud Provider: NVIDIA
+    cloud: nvidia
+    # Expensive GPU on NVIDIA
+    gpu: nvidia-geforce-rtx-5080
+    # Expensive VM on NVIDIA, with GPU attachable
+    instance_type: x1-standard-1
+    # Custom image with NVIDIA drivers installed on Windows-Server-2025
+    machine_image: sgkit-dev:cirun-nvidia
+    # preemptible instances seems quite less reliable
+    preemptible: .github/workflows/main.yml
+    # Path of the relevant workflow file
+    labels:
+      - gpu
