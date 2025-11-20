@@ -1,4 +1,5 @@
 runners:
+  jobs: 
   - name: gpu-runner
     # Cloud Provider: NVIDIA
     cloud: nvidia
