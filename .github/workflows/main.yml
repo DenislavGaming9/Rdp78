@@ -33,7 +33,7 @@ defaults:
 jobs:
   setup:
   # ... (Remains unchanged)
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.mk.outputs.matrix }}
       multi:  ${{ steps.mk.outputs.multi }}   # expose single vs multi
