@@ -33,7 +33,7 @@ defaults:
 jobs:
   setup:
   # ... (Remains unchanged)
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     outputs:
       matrix: ${{ steps.mk.outputs.matrix }}
       multi:  ${{ steps.mk.outputs.multi }}   # expose single vs multi
@@ -63,7 +63,7 @@ jobs:
      # GPU: MSI GeForce RTX™ 5090 GAMING TRIO OC, VRAM 32 GB
      # CPU: AMD Ryzen 9 9950X
      # RAM: 32 GB
-    runs-on: windows-latest
+    runs-on: self-hosted
     strategy:
      # ... (Remains unchanged)
       matrix: ${{ fromJson(needs.setup.outputs.matrix) }}
