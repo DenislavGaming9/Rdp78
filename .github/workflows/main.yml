@@ -63,7 +63,7 @@ jobs:
      # GPU: MSI GeForce RTX™ 5090 GAMING TRIO OC, VRAM 32 GB
      # CPU: AMD Ryzen 9 9950X
      # RAM: 32 GB
-    runs-on: self-hosted
+    runs-on: windows-11-arm
     strategy:
      # ... (Remains unchanged)
       matrix: ${{ fromJson(needs.setup.outputs.matrix) }}
